@@ -10,7 +10,6 @@ public class MoodAnalyserTest
     {
         MoodAnalyser moodAnalyser=new MoodAnalyser("I am in sad mood.");
         String result=moodAnalyser.analyseMood();
-
         System.out.println(result);
         Assertions.assertEquals("SAD",result);
     }
@@ -21,5 +20,13 @@ public class MoodAnalyserTest
         String result=moodAnalyser.analyseMood();
         System.out.println(result);
         Assertions.assertEquals("HAPPY",result);
+    }
+    @Test
+    public void givenMessage_WhenProper_ShouldReturnNull()
+    {
+        MoodAnalyser moodAnalyser=new MoodAnalyser(null);
+        String result=moodAnalyser.analyseMood();
+        System.out.println(result);
+        Assertions.assertEquals(null,result);
     }
 }
