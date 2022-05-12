@@ -1,11 +1,20 @@
 package com.moodanalyser;
 public class MoodAnalyser {
-    public String analyseMood(String msg)
+
+    private String message;
+  //Parameterized Constructor
+    public MoodAnalyser(String msg){
+        this.message=msg;
+      //calling analyseMood() Method
+        analyseMood();
+
+    }
+    public String analyseMood()
     {
-        if (msg.contains("sad"))
+        if (message.contains("sad"))
         {
             return "SAD";
-        } else if (msg.contains("any"))
+        } else if (message.contains("any"))
         {
             return "HAPPY";
         } else
