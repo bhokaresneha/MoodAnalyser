@@ -38,6 +38,5 @@ public class MoodAnalyserTest
         String result=moodAnalyser.analyseMood();
         System.out.println(result);
         Assertions.assertEquals("HAPPY (Invalid Mood block)",result);
-        Assertions.assertEquals(null,result);
     }
 }
