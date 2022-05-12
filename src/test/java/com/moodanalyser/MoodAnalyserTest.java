@@ -21,12 +21,23 @@ public class MoodAnalyserTest
         System.out.println(result);
         Assertions.assertEquals("HAPPY",result);
     }
-    @Test
+   
+   @Test
     public void givenMessage_WhenProper_ShouldReturnNull()
     {
         MoodAnalyser moodAnalyser=new MoodAnalyser(null);
         String result=moodAnalyser.analyseMood();
         System.out.println(result);
+        Assertions.assertEquals(null,result);
+    }
+
+    @Test
+    public void givenMessage_WhenProper_ShouldReturnHAPPY()
+    {
+        MoodAnalyser moodAnalyser=new MoodAnalyser(null);
+        String result=moodAnalyser.analyseMood();
+        System.out.println(result);
+        Assertions.assertEquals("HAPPY (Invalid Mood block)",result);
         Assertions.assertEquals(null,result);
     }
 }

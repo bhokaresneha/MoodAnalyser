@@ -20,7 +20,7 @@ public class MoodAnalyser {
             }
         }catch (NullPointerException e)
         {
-            return null;
+            return "HAPPY (Invalid Mood block)";
         }
     }
 }
